@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  php-fpm:
+  phpfpm:
     build:
       context: .
       dockerfile: ./docker/phpfpm/Dockerfile
@@ -17,7 +17,7 @@ services:
     ports:
       - '80:80'
     depends_on:
-      - php-fpm
+      - phpfpm
       - db
 
   db:

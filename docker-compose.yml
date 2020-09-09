@@ -34,3 +34,6 @@ services:
     volumes:
       - ./reids:/data
     restart: always
+
+volumes:
+  db_data:

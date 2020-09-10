@@ -12,6 +12,7 @@ services:
       - '9000:9000'
 
   node:
+    tty: true
     image: node:14.10.0-alpine3.10
     volumes:
       - ./src:/src

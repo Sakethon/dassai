@@ -37,7 +37,7 @@ services:
   redis:
     image: redis:6.0.7
     volumes:
-      - ./reids:/data
+      - ./redis:/data
     restart: always
 
 volumes:

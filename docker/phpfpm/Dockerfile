@@ -9,10 +9,3 @@ RUN php -r "unlink('composer-setup.php');"
 RUN mv composer.phar /usr/local/bin/composer
 
 RUN composer global require laravel/installer
-
-WORKDIR /src
-
-COPY ./src /src
-COPY ./docker/phpfpm/php.ini /usr/local/etc/php/php.ini
-
-RUN chmod -R a=rwX /src/storage

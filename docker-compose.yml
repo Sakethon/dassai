@@ -6,7 +6,8 @@ services:
       context: .
       dockerfile: ./docker/phpfpm/Dockerfile
     volumes:
-      - ./src:/src
+      - ./src:/var/www/html
+      - ./docker/phpfpm/php.ini:/usr/local/etc/php/php.ini
     ports:
       - '9000:9000'
 

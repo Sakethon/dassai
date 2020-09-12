@@ -8,6 +8,13 @@ services:
     volumes:
       - ./src:/var/www/html
       - ./docker/phpfpm/php.ini:/usr/local/etc/php/php.ini
+    environment:
+      - DB_CONNECTION=${DB_CONNECTION}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_DATABASE=${POSTGRES_DB}
+      - DB_USERNAME=${POSTGRES_USER}
+      - DB_PASSWORD=${POSTGRES_PASSWORD}
     ports:
       - '9000:9000'
 

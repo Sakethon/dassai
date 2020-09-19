@@ -7,3 +7,4 @@ setup:
 	docker-compose exec phpfpm php artisan key:generate
 	docker-compose exec phpfpm php artisan migrate:fresh --seed
 	docker-compose exec node /bin/sh -c "cd src && npm install"
+	docker-compose exec phpfpm php artisan jetstream:install inertia

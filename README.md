@@ -12,3 +12,10 @@ docker-compose build
 docker-compose up -d
 docker-compose exec phpfpm composer install
 ```
+
+もしくは
+
+```
+/dassai配下で
+make setup
+```

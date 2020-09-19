@@ -6,4 +6,4 @@ setup:
 	docker-compose exec phpfpm composer install
 	docker-compose exec phpfpm php artisan key:generate
 	docker-compose exec phpfpm php artisan migrate:fresh --seed
-	docker-compose exec node npm install
+	docker-compose exec node /bin/ash -c "cd src && npm install"
